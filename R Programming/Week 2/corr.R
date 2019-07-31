@@ -1,8 +1,8 @@
-complete <- function(directory, files=1:332){
+corr <- function(directory, threshold){
 library(stringr)
 
-df1 <- data.frame()
-df1 <- c("id", "nobs")
+
+files <- 1:332
 
 
 for (val in files) {
@@ -10,8 +10,9 @@ for (val in files) {
   df <- read.csv(paste(c(getwd(),"/", directory, "/", val_str, ".csv"), collapse = ""))
   x <- df[complete.cases(df), ]
   
-  df1 <- rbind(df1, c(val, nrow(x)))
-  
+  if (nrow(x) > threshold){
+    print(cor(x$sulfate, x$nitrate))
+  }
+
 }
-df1
 }

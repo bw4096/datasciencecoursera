@@ -1,4 +1,4 @@
-pollutantmean <- function(directory, pollutant, files){
+pollutantmean <- function(directory, pollutant, files=1:332){
 
 library(stringr)
 
