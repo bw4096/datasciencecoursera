@@ -1,9 +1,9 @@
+pollutantmean <- function(directory, pollutant, files){
+
 library(stringr)
 
-files <- 23
-directory <- "specdata"
 total <- 0
-pollutant = "nitrate"
+
 df1 <- data.frame()
 for (val in files) {
   val_str <- str_pad(val,3,pad="0")
@@ -12,3 +12,4 @@ for (val in files) {
 }
 
 if(all(pollutant == "sulfate")) print(mean(df1$sulfate,na.rm = TRUE)) else print(mean(df1$nitrate,na.rm = TRUE))
+}
