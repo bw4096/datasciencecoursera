@@ -3,7 +3,7 @@ library(stringr)
 
 
 files <- 1:332
-
+result_vect <- c()
 
 for (val in files) {
   val_str <- str_pad(val,3,pad="0")
@@ -11,8 +11,9 @@ for (val in files) {
   x <- df[complete.cases(df), ]
   
   if (nrow(x) > threshold){
-    print(cor(x$sulfate, x$nitrate))
+     cor(x$sulfate, x$nitrate)
   }
 
 }
+
 }

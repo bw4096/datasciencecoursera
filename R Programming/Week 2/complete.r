@@ -13,5 +13,5 @@ for (val in files) {
   df1 <- rbind(df1, c(val, nrow(x)))
   
 }
-df1
+print(df1)
 }
