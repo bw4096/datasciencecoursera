@@ -11,9 +11,10 @@ for (val in files) {
   x <- df[complete.cases(df), ]
   
   if (nrow(x) > threshold){
-     cor(x$sulfate, x$nitrate)
+    x <- cor(x$sulfate, x$nitrate)
+    result_vect <- c(result_vect, x)
   }
 
 }
-
+print(result_vect)
 }
