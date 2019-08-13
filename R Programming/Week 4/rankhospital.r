@@ -1,7 +1,8 @@
 rankhospital <- function(state, outcome, num = "best") {
+    library(dplyr)
     ## Read outcome data
-    df1 <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
-    df <- df1[complete.cases(df1),]
+    df <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+    #df <- df1[complete.cases(df1),]
     
     ## Check that state and outcome are valid
     if(num == "best")
