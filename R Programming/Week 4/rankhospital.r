@@ -21,6 +21,9 @@ rankhospital <- function(state, outcome, num = "best") {
     answer <- arrange(answer_list, as.numeric(answer_list[,3])) 
     
     answer1 <- answer[order(as.numeric(answer[,3]), answer[,1]),]
-    #answer2 <- answer1[complete.cases(answer1),]
+    answer1[,3]<- replace(answer1[,3], answer1[,3] == "Not Available", NA)
+    answer1 <- na.omit(answer1)
+    if(num == "worst")
+        num <- length(answer1[,3])
     return(answer1[num, 1])
 }
