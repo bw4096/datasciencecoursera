@@ -83,10 +83,10 @@ The script applies the following transformations to the data:
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 
 3. Uses descriptive activity names to name the activities in the data set
-  * Applies lowercase transformation, removes underscores and capitalizes first letters of words for readability
+  * Applies lowercase transformation and removes underscores 
   
 4. Appropriately labels the data set with descriptive variable names.
-  * Applies lowercase transformation, removes underscores and parentheses, and capitalizes first letters of words for readability
+  * Applies lowercase transformation, removes underscores and parentheses
   
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
   * Merges subject list, activities and dataset with descriptive labels
