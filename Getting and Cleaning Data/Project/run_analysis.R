@@ -47,3 +47,6 @@ names(subjects) = "subject"
 completeMeanStd <- bind_cols(subjects, activities, meanStd)
 newMeanStd <- completeMeanStd %>%
     ddply(.(subject, activity), colwise(mean))
+
+# output tidy dataset to file
+write.table(newMeanStd, file = "tidyMeanStd.txt", row.name = FALSE)
