@@ -12,8 +12,7 @@ source("run_analysis.R") command in RStudio.
   * Loads relevant packages
   * Downloads source data and extracts files to a data folder in the working directory (if data files have not been manually saved and extracted)
   * Performs required merging and transformations to tidy the dataset
-  * Writes the final tidy dataset to the working directory
-        
+  
 * CodeBook.md - Contains a detailed description of the variables, the data, and transformations/work performed on the data by the run_analysis.R script
 
 * newMeanStd.txt - Final tidy dataset produced by the run_analysis.R script
